@@ -1,0 +1,66 @@
+/* Body styling */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    
+
+}
+
+/* Header */
+header {
+    background-image: linear-gradient(to right, #28a745, #78e28f);
+    border-bottom: 4px solid #07160a;
+}
+
+/* Success message animation */
+.alert {
+    animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* List items */
+.list-group-item {
+    transition: transform 0.2s, background-color 0.3s;
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02);
+}
+
+/* Delete button */
+.btn-danger {
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Footer styling */
+footer {
+    font-size: 0.9rem;
+    color: #6c757d;
+}

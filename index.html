@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+          crossorigin="anonymous">
+    
+   
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <header class="bg-success text-white p-4 shadow">
+        <div class="container text-center">
+            <h3 class="display-4"><img src="img/list.png" alt="todo img" height="50" style="margin: 0 20px 0 0;"><strong>To-Do List</strong></h3>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <!-- Success Message -->
+        <div id="lblsuccess" class="alert alert-success text-center d-none" role="alert">
+            Task added successfully!
+        </div>
+
+        <!-- Task Input Section -->
+        <section class="card p-4 shadow">
+            <h2 class="mb-3">Add Task</h2>
+            <form id="addForm">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="item" placeholder="Enter a new task" 
+                           onkeyup="toggleButton(this, 'submit')">
+                    <div class="input-group-append">
+                        <button class="btn btn-dark" id="submit" type="submit" disabled>Add Task</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Task List Section -->
+        <section class="mt-4">
+            <h3>Your Tasks</h3>
+            <ul class="list-group shadow" id="items"></ul>
+        </section>
+    </main>
+
+    <footer class="text-center py-3 bg-light shadow">
+        <small>&copy; 2024 Anil vishwakrma</small>
+    </footer>
+</body>
+
+</html>
